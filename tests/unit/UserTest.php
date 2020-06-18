@@ -2,6 +2,7 @@
 
 class UserTest extends \PHPUnit\Framework\TestCase
 {
+    /** @test */
     public function testThatWeCanGetTheFirstName()
     {
         $user = new \App\Models\User;
@@ -11,6 +12,7 @@ class UserTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($user->getFirstName(), 'Moamer');
     }
 
+    /** @test */
     public function testThatWeCanGetTheLastName()
     {
         $user = new \App\Models\User;
@@ -20,6 +22,7 @@ class UserTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($user->getLastName(), 'Jusupovic');
     }
 
+    /** @test */
     public function testFullNameIsReturned()
     {
         $user = new \App\Models\User;
@@ -29,6 +32,7 @@ class UserTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($user->getFullName(), 'Moamer Jusupovic');
     }
 
+    /** @test */
     public function testFirstAndLastNameAreTrimmed()
     {
         $user = new \App\Models\User;
@@ -39,6 +43,7 @@ class UserTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($user->getLastName(), 'Jusupovic');
     }
 
+    /** @test */
     public function testEmailAddressCanBeSet()
     {
         $user = new \App\Models\User;
@@ -47,6 +52,7 @@ class UserTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($user->getEmail(), 'moamer@live.com');
     }
 
+    /** @test */
     public function testEmailVariablesContainCorrectValues()
     {
         $user = new \App\Models\User;
